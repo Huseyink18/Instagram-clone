@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: grid;
+    border: 2px solid red;
+    width: 100vw;
+    height: 80vh;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 2fr 1fr 3fr 1fr 3fr;
+    grid-template-areas:
+        "image first-line"
+        "image second-line"
+        "image bio"
+        "middle-line middle-line"
+        "stories stories";
+}
+
+.profil {
+    border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    grid-area: image;
+}
+.outer-circle {
+    background: linear-gradient(135deg, #833AB4, #F56040);
+    border: 40%;
+ } 
+
+.img-profil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-profil img {
+    border-radius: 50%;
+    width: 60%;
+    aspect-ratio: 1/1;
+
+}
+
+
+
+.first-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    border: 2px solid green;
+    width: 100%;
+    height: 60%;
+    grid-area: first-line;
+}
+
+.follow {
+    width: 70px;
+    height: 30px;
+    border-radius: 10%;
+    background-color: #0095f6;
+    padding: 5px 14px;
+}
+
+.message {
+    width: 70px;
+    height: 30px;
+    border-radius: 10%;
+    background-color: white;
+    padding: 5px 7px;
+}
+
+.second-line ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid yellow;
+    width: 100%;
+    height: 60%;
+    grid-area: second-line;
+}
+
+.second-line, ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+.second-line ul li:nth-child(odd) {
+    font-weight: 900;
+}
+
+
+.bio {
+    
+    display: flex;
+    flex-direction: column;
+
+    border: 2px solid orange;
+    width: 100%;
+    height: 90%;
+    grid-area: bio;
+}
+
+h1 {
+    font-size: x-large;
+}
+
+h4{
+    font-size: smaller;
+    font-weight: 300;
+    font-style: italic;
+    color: grey;
+}
+
+h3{
+    font-size: medium;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+}
+h5 { 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: smaller;
+    font-weight: 300;
+    font-style: italic;
+    text-align: end;
+}
+
+
+
+
+
+.middle-line {
+    border: 2px solid black;
+    grid-area: middle-line;
+
+}
+
+.stories {
+    border: 2px solid gray;
+    width: 100%;
+    grid-area: stories;
+}
